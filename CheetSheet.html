@@ -11,7 +11,7 @@
 
     <section>
         <h2>World Wide Web</h2>
-        <ul>
+        <ul class="custom-bullets">
             <li><strong>HTML (HyperText Markup Language)</strong>: Language used to create web pages.</li>
             <li><strong>URL (Uniform Resource Locator)</strong>: Unique address for web resources.</li>
             <li><strong>HTTP (Hypertext Transfer Protocol)</strong>: Protocol for data transmission over the web.</li>
@@ -23,7 +23,7 @@
         <p>The URL is an address used to access resources on the internet.</p>
         <h3>Syntax:</h3>
         <code>scheme://host:port/path?query#fragment</code>
-        <ul>
+        <ul class="custom-bullets">
             <li><strong>Scheme</strong>: Protocol (e.g., <code>http</code>, <code>https</code>)</li>
             <li><strong>Host</strong>: Domain name (e.g., <code>www.example.com</code>)</li>
             <li><strong>Port</strong>: Optional (e.g., <code>:80</code>)</li>
@@ -37,7 +37,7 @@
         <h2>Web Servers</h2>
         <p>A web server delivers web content to clients (browsers) over the internet.</p>
         <h3>Function:</h3>
-        <ul>
+        <ul class="custom-bullets">
             <li>Stores, processes, and delivers web pages to clients upon request.</li>
             <li>Handles HTTP/HTTPS requests and responses.</li>
             <li>Executes server-side scripts and delivers dynamic content.</li>
@@ -62,27 +62,75 @@
                 The <code>< head ></code> tag is used to access metadata (data within data). <br>
                 MetaData typically define things in an HTML webpage like:<br>
             </p>
-            <ul>
+            <ul class="custom-bullets">
                 <li>Title</li>
                 <li>Style</li>
                 <li>Link and etc.</li>
             </ul>
-        <h3>EM tag</h3>
+            <h3>EM tag</h3>
             <p>
                 The <code>em</code> tag simply emphasize a text in the HTML file. <br>
                 eg. <code>The < em ><em>project</em>< /em > has to be completed before <em>Monday.</em></code>
             </p>
-        <h3>Strong tag</h3>
+            <h3>Strong tag</h3>
             <p>
                 The <code>strong</code> tag is another way to emphasize a text.<br>
                 e.g. <code>The < strong ><strong>assignment </strong>< /strong > has to be given on < strong ><strong>Tuesday</strong> < /strong ></code>
             </p>
-        <h3>Comments</h3>
+            <h3>Comments</h3>
             <p>
                 Comments in html can be useful if you want to let other developers know some information about the website.<br>
                 You can also use it to hide content. <br>
                 eg. <code> < !-- This is a comment -- >.</code>.
             </p>
+            <h3>Lists</h3>
+            <p>
+                Lists allow web developers to group a set of related items. <br />
+                for example: <br />
+            </p>
+            <ul class="custom-bullets">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3 and etc</li>
+            </ul>
+            <h4>Unordered Lists</h4>
+            <p>
+                As shown in the example beforehand, unordered lists items <b>without numbering them.</b><br />
+                They are usually marked with a bullet point <strong>•</strong>.<br />
+                You can also <i>nest</i> the list. (list within a list).
+            </p>
+            <ul class="custom-bullets">
+                <li>Item 1</li>
+                <li>
+                    Some item
+                    <ul class="custom-bullets">
+                        <li> Sub Item 1</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Ordered Lists</h4>
+        <p>
+            Ordered lists are basically the same as <code>unordered</code> lists but with <i>1 key exception:</i><br />
+            <i>Ordered lists designate each item with a <sup>1</sup>number.</i><br />
+            <sup>1</sup>not necessarily numbers but more on that later.<br />
+        </p>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3 and etc</li>
+        </ol>
+        <p>
+            As usual, you can next this. <br/>
+        </p>
+        <ol>
+            <li>Item 1</li>
+            <li>
+                Item 2
+                <ol>
+                    <li> Sub-Ordered Item in list</li>
+                </ol>
+            </li>
+        </ol>
     </section>
     <section>
         <h2>CSS syntax</h2>

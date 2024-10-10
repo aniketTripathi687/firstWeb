@@ -5,9 +5,12 @@
     background-color: black;
     color: white;
 }
+
 h1 { color: #2a6bbf; }
 h2 { color: #358f49; }
 h3 { color: coral; }
+h4 { color: burlywood; }
+
 code {
     background-color: Black;
     padding: 2px 4px;
@@ -17,4 +20,25 @@ code {
 }
 section {
     margin-bottom: 20px;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+.custom-bullets{
+    list-style: none;
+}
+
+.custom-bullets li::before{
+    content: "\2022"; /* Unicode for bullet point */
+    color: mediumspringgreen;      /* Bullet color */
+    font-size: 20px;  /* Bullet size */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.custom-bullets li{
+    color: white;
 }
