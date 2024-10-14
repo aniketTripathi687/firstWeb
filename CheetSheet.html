@@ -132,6 +132,101 @@
                 </ol>
             </li>
         </ol>
+        <h3>Tables</h3>
+        <p>
+            Tables can be used to arrange data into rows and columns. <br />
+        </p>
+        <table>
+            <caption>Table 1</caption>
+            <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Some Item 1</td>
+                <td>Some Item 2</td>
+                <td>Some Item 3</td>
+            </tr>
+            <tr>
+                <td>Some Item 4</td>
+                <td>Some Item 5</td>
+                <td>Some Item 6</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>
+            <br/>
+            Each table is defined by a <strong>< td ></strong> and <strong>< /td ></strong> tag.<br />
+            <strong>td</strong> stands for <strong>table data</strong>, and it is used to write data in a <strong>single cell</strong>.
+        </p>
+        <h4>Table spanning</h4>
+        <p>
+            Table rows, headers or columns can <i>span</i> multiple rows and columns.
+        </p>
+        <table>
+            <tr>
+                <th colspan="2">Big Item 1</th>
+                <th>Other item</th>
+            </tr>
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+                <td>Item 3</td>
+            </tr>
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+                <td>Item 3</td>
+            </tr>
+        </table>
+        <p>
+            <br /> You can do so with the <strong>colspan</strong> attribute. <br/>
+            <strong>colspan</strong> stands for <strong>column-span</strong>, and it makes a cell size <i>bigger</i>.<br />
+            You can so the same with <code> <strong>rowspan</strong>!</code>.
+        </p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>Jill</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>555-1234</td>
+            </tr>
+            <tr>
+                <td>555-8745</td>
+            </tr>
+        </table>
+        <h4>Footers</h4>
+        <p>
+            You can also add footers to the tables. A footer is just a text at the bottom of the table.<br/>
+            Let's take the table prior as an example:
+        </p>
+        <table>
+            <tbody>
+            <tr>
+                <th>Name</th>
+                <td>Jill</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Phone</th>
+                <td>555-1234</td>
+            </tr>
+            <tr>
+                <td>555-8745</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Sample Item</td>
+                <td>Sample Item 2</td>
+            </tr>
+            </tfoot>
+        </table>
     </section>
     <section>
         <h2>CSS syntax</h2>

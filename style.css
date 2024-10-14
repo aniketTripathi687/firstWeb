@@ -42,3 +42,12 @@ ol {
 .custom-bullets li{
     color: white;
 }
+
+table, th, td{
+    border: 1px solid;
+}
+
+strong{
+    font-weight: bolder;
+    font-size: large;
+}
