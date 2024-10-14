@@ -26,6 +26,10 @@ ol {
     list-style-type: upper-roman;
 }
 
+.url{
+    font-size: 25px;
+}
+
 .custom-bullets{
     list-style: none;
 }
