@@ -7,9 +7,18 @@
     <title>Cheat Sheet</title>
 </head>
 <body>
-    <h1>Cheat Sheet</h1>
+    <h1 id="top">Cheat Sheet</h1>
 
-    <section>
+    <div class="nav-buttons">
+        <a href="#worldwide-web">World Wide Web</a>
+        <a href="#url">URL</a>
+        <a href="#web-servers">Web Servers</a>
+        <a href="#html-syntax">HTML Syntax</a>
+        <a href="#css-syntax">CSS Syntax</a>
+    </div>
+
+    <hr>
+    <section id="worldwide-web">
         <h2>World Wide Web</h2>
         <ul class="custom-bullets">
             <li><strong>HTML (HyperText Markup Language)</strong>: Language used to create web pages.</li>
@@ -18,7 +27,8 @@
         </ul>
     </section>
 
-    <section>
+    <hr>
+    <section id="url">
         <h2>URL (Uniform Resource Locator)</h2>
         <p>The URL is an address used to access resources on the internet.</p>
         <h3>Syntax:</h3>
@@ -33,7 +43,8 @@
         </ul>
     </section>
 
-    <section>
+    <hr>
+    <section id="web-servers">
         <h2>Web Servers</h2>
         <p>A web server delivers web content to clients (browsers) over the internet.</p>
         <h3>Function:</h3>
@@ -44,7 +55,8 @@
         </ul>
     </section>
 
-    <section>
+    <hr>
+    <section id="html-syntax">
         <h2>HTML Syntax</h2>
             <h3>Doctype</h3>
             <p>
@@ -228,7 +240,9 @@
             </tfoot>
         </table>
     </section>
-    <section>
+
+    <hr>
+    <section id="css-syntax">
         <h2>CSS syntax</h2>
             <ul class="custom-bullets">
                 <li><strong>CSS</strong> = Cascading Style Sheet. </li>
@@ -254,5 +268,9 @@
                 <li> Item with circle marker</li>
             </ul>
     </section>
+
+    <div class="return-top">
+        <a href="#top" class="nav-buttons">Return to Top</a>
+    </div>
 </body>
 </html>
