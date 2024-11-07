@@ -67,6 +67,7 @@
                 <a href="#images">Images</a>
                 <a href="#lists">Lists</a>
                 <a href="#tables">Tables</a>
+                <a href="#classes-ids">Classes and ID's</a>
             </div>
 
             <h3 id="doctype">Doctype</h3>
@@ -276,8 +277,33 @@
             </tr>
             </tfoot>
         </table>
-    </section>
+        <h3 id="classes-ids">Classes and IDs</h3>
+        <p>In HTML, <code>class</code> and <code>id</code> are used to uniquely identify elements and apply styles to them with CSS.</p>
 
+        <h4>Classes</h4>
+        <p>The <code>class</code> attribute is used to apply styles to multiple elements at once. Multiple elements can share the same class.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>&lt;div class="classname"&gt;Content&lt;/div&gt;</code>
+        <p>Example:</p>
+        <code>&lt;div class="container"&gt;This is a container&lt;/div&gt;</code>
+        <p>You can apply styles to elements with a particular class using the <code>class</code> selector in CSS:</p>
+        <code>.classname { color: red; }</code>
+
+        <h4>IDs</h4>
+        <p>The <code>id</code> attribute is used to uniquely identify an element. An <code>id</code> should be used for one element only on a page. This allows for precise targeting with CSS or JavaScript.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>&lt;div id="uniqueID"&gt;Content&lt;/div&gt;</code>
+        <p>Example:</p>
+        <code>&lt;div id="header"&gt;This is a header&lt;/div&gt;</code>
+        <p>In CSS, you can target an element with a specific <code>id</code> using the <code>#</code> symbol:</p>
+        <code>#uniqueID { background-color: blue; }</code>
+
+        <p>Remember:</p>
+        <ul class="custom-bullets">
+            <li><strong>class</strong> is used for grouping elements that share the same style or behavior.</li>
+            <li><strong>id</strong> is used for uniquely identifying an element.</li>
+        </ul>
+    </section>
     <hr>
     <section id="css-syntax">
         <h2>CSS Syntax</h2>
@@ -288,6 +314,8 @@
             <a href="#tables-css">Tables</a>
             <a href="#links-css">Links & URLs</a>
             <a href="#box-model">Box Model</a>
+            <a href="#class-id-selectors">Selectors</a>
+            <a href="#float-attribute">Float Attribute</a>
         </div>
 
         <ul class="custom-bullets">
@@ -367,6 +395,44 @@
         <div style="padding: 10px; border: 2px solid lightgray; margin: 20px;">
             This div demonstrates the box model with padding, border, and margin.
         </div>
+
+        <h3 id="class-id-selectors">.class and #id Selectors</h3>
+        <p>In CSS, selectors are used to target HTML elements and apply styles to them. Two common selectors are the <code>.class</code> selector and the <code>#id</code> selector.</p>
+
+        <h4>.class Selector</h4>
+        <p>The <code>.class</code> selector is used to select elements with a specific class. It applies styles to all elements that share the same class.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>.classname { property: value; }</code>
+        <p>Example:</p>
+        <code>.button { background-color: green; }</code>
+        <p>This will apply the <code>background-color</code> style to all elements with the class <code>button</code>.</p>
+
+        <h4>#id Selector</h4>
+        <p>The <code>#id</code> selector is used to select a unique element with a specific <code>id</code>. Since IDs are unique to each element, this selector targets only one element on the page.</p>
+        <p><strong>Syntax:</strong></p>
+        <code>#idname { property: value; }</code>
+        <p>Example:</p>
+        <code>#header { font-size: 24px; }</code>
+        <p>This will apply the <code>font-size</code> style to the element with the <code>id</code> of <code>header</code>.</p>
+
+        <h3 id="float-attribute">Float Attribute</h3>
+        <p>The <code>float</code> property in CSS is used to position elements to the left or right of their container, allowing other content to flow around them.</p>
+        <p>The <code>float</code> property can be set to:</p>
+        <ul class="custom-bullets">
+            <li><code>left</code>: Floats the element to the left of its container.</li>
+            <li><code>right</code>: Floats the element to the right of its container.</li>
+            <li><code>none</code>: Resets the float property (default value).</li>
+        </ul>
+
+        <p><strong>Syntax:</strong></p>
+        <code>element { float: left; }</code>
+        <p>Example:</p>
+        <code>.image { float: right; margin: 10px; }</code>
+        <p>This will float the element with the <code>image</code> class to the right, with a margin around it.</p>
+
+        <p>Note: After floating an element, it is important to clear the float if you don't want it to affect the layout of subsequent elements. You can clear floats using the <code>clear</code> property in CSS:</p>
+        <code>.clearfix { clear: both; }</code>
+        <p>This ensures that any floated elements don’t affect the layout of elements following them.</p>
 
     </section>
 
