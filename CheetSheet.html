@@ -63,6 +63,8 @@
                 <a href="#doctype">Doctype</a>
                 <a href="#html-tag">HTML tag</a>
                 <a href="#head-tag">HEAD tag</a>
+                <a href="#links">Links</a>
+                <a href="#images">Images</a>
                 <a href="#lists">Lists</a>
                 <a href="#tables">Tables</a>
             </div>
@@ -104,7 +106,33 @@
                 You can also use it to hide content. <br>
                 eg. <code> < !-- This is a comment -- >.</code>.
             </p>
-            <h3 id="lists">Lists</h3>
+        <h3 id="links">Links</h3>
+        <p>Links are used to navigate between different web pages or resources. They are created using the <code>&lt;a&gt;</code> (anchor) tag.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <code>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</code>
+        <p>For example:</p>
+        <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code>
+        <p>Attributes for links:</p>
+        <ul class="custom-bullets">
+            <li><strong>href</strong>: The destination URL for the link.</li>
+            <li><strong>target</strong>: Specifies where to open the linked document (e.g., <code>_blank</code> for a new tab).</li>
+            <li><strong>title</strong>: Adds additional information about the link, shown as a tooltip.</li>
+        </ul>
+
+        <h3 id="images">Images</h3>
+        <p>Images are embedded using the <code>&lt;img&gt;</code> tag. Unlike other elements, <code>&lt;img&gt;</code> is a self-closing tag.</p>
+        <p><strong>Basic Syntax:</strong></p>
+        <code>&lt;img src="image.jpg" alt="Description" width="500" height="300"&gt;</code>
+        <p>Attributes for images:</p>
+        <ul class="custom-bullets">
+            <li><strong>src</strong>: Specifies the path to the image file.</li>
+            <li><strong>alt</strong>: Alternative text for the image, used for accessibility.</li>
+            <li><strong>width</strong> and <strong>height</strong>: Set the image dimensions (in pixels).</li>
+        </ul>
+        <p>Example:</p>
+        <code>&lt;img src="https://www.example.com/image.jpg" alt="Example Image" width="300" height="200"&gt;</code>
+
+        <h3 id="lists">Lists</h3>
             <p>
                 Lists allow web developers to group a set of related items. <br />
                 for example: <br />
