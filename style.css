@@ -11,8 +11,8 @@ h1 {
     text-align: center;
 }
 h2 { color: #358f49; }
-h3 { color: coral; }
-h4 { color: burlywood; }
+h3 { color: coral; font-size: 1.5em; }
+h4 { color: burlywood;  font-size: 1.25em; }
 
 code {
     background-color: Black;
@@ -20,6 +20,7 @@ code {
     border-radius: 3px;
     font-family: "Times New Roman", sans-serif;
     color: lightskyblue;
+    font-size: larger;
 }
 section {
     margin-bottom: 20px;

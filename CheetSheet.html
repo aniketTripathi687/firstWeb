@@ -252,36 +252,94 @@
 
     <hr>
     <section id="css-syntax">
-        <h2>CSS syntax</h2>
+        <h2>CSS Syntax</h2>
 
-            <div class="subnav-buttons">
-                <a href="#basic-syntax">Basic Syntax</a>
-                <a href="#lists-css">Lists</a>
-            </div>
+        <div class="subnav-buttons">
+            <a href="#basic-syntax">Basic Syntax</a>
+            <a href="#lists-css">Lists</a>
+            <a href="#tables-css">Tables</a>
+            <a href="#links-css">Links & URLs</a>
+            <a href="#box-model">Box Model</a>
+        </div>
 
-            <ul class="custom-bullets">
-                <li><strong>CSS</strong> = Cascading Style Sheet. </li>
-            </ul>
-            <h3 id="basic-syntax">Basic Syntax</h3>
-            <p>
-                the syntax goes like so:
-                <code><b>Selector</b> = { Property: Value; }<br></code>
-                This is the basic syntax.
-            </p>
-            <h3 id="lists-css">Lists</h3>
-            <p>
-                The <code>list-style-type</code> property allows the editing of the list marker.<br />
-                For example:<br/>
-                <code>
-                    ul {
-                        list-style-type: circle;
-                    }
-                </code><br />
-                Result:<br />
-            </p>
-            <ul>
-                <li> Item with circle marker</li>
-            </ul>
+        <ul class="custom-bullets">
+            <li><strong>CSS</strong> = Cascading Style Sheet</li>
+        </ul>
+
+        <h3 id="basic-syntax">Basic Syntax</h3>
+        <p>The syntax is as follows:</p>
+        <code><b>Selector</b> { Property: Value; }</code>
+
+        <h3 id="lists-css">Lists</h3>
+        <p>Styling lists with CSS allows control over the appearance of list markers.</p>
+        <code>
+            ul { list-style-type: square; }<br>
+            ol { list-style-type: decimal; }
+        </code>
+
+        <ul>
+            <li>Item with a square bullet</li>
+            <li>Another item</li>
+        </ul>
+
+        <h3 id="tables-css">Tables</h3>
+        <p>Tables can be styled to improve readability and layout.</p>
+        <code>
+            table { border-collapse: collapse; width: 100%; }<br>
+            th, td { border: 1px solid white; padding: 8px; text-align: left; }
+        </code>
+
+        <hr>
+        <table>
+            <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h3 id="links-css">Links & URLs</h3>
+        <p>Links can be styled for different states, such as <code>hover</code> and <code>visited</code>.</p>
+        <code>
+            a { color: lightcoral; text-decoration: none; }<br>
+            a:hover { color: coral; }<br>
+            a:visited { color: gray; }
+        </code>
+
+        <p>Example: <a href="#">Hover over this link</a> to see the color change.</p>
+
+        <h3 id="box-model">The CSS Box Model</h3>
+        <p>The CSS Box Model is the layout structure of each element on the page, consisting of the content, padding, border, and margin.</p>
+
+        <ul class="custom-bullets">
+            <li><strong>Content</strong>: The actual element, like text or an image.</li>
+            <li><strong>Padding</strong>: The space between the content and the border. Adds internal spacing.</li>
+            <li><strong>Border</strong>: The line surrounding the padding and content.</li>
+            <li><strong>Margin</strong>: The space outside the border, creating space between elements.</li>
+        </ul>
+
+        <p>To illustrate:</p>
+        <code>
+            div {<br>
+            &nbsp;&nbsp;padding: 10px;<br>
+            &nbsp;&nbsp;border: 2px solid lightgray;<br>
+            &nbsp;&nbsp;margin: 20px;<br>
+            }
+        </code>
+
+        <div style="padding: 10px; border: 2px solid lightgray; margin: 20px;">
+            This div demonstrates the box model with padding, border, and margin.
+        </div>
+
     </section>
 
     <div class="return-top">
