@@ -1,22 +1,59 @@
 ﻿export class MorseCodeDic {
+    toMorse;
+    toStr;
+    endingIndex;
 
     constructor() {
         [this.toMorse, this.toStr] = MorseCodeDic.initMaps();
+        this.endingIndex = 0;
     }
 
     convertMorseToText(morse) {
-        let text = ' ';
-        let startingIdx = 0;
-        let endingIdx = 0;
-        while(morse[endingIdx] !== '_') {
-            endingIdx++;
+        let text = '';
+        this.endingIndex = 0;
+
+        while (this.endingIndex < morse.length) {
+            text += this.iterateToNextLetter(morse);
         }
-        let letter = morse.substring(0, endingIdx);
-        text += this.toStr.getValue(letter);
 
-        console.log(text);
+        return text.trim(); // Trim any extra spaces
+    }
 
-        return text;
+    iterateToNextLetter(morse) {
+        let startIdx = this.endingIndex;
+
+        while (this.endingIndex < morse.length && morse[this.endingIndex] !== '_') {
+            this.endingIndex++;
+        }
+
+        let morseLetter = morse.substring(startIdx, this.endingIndex);
+
+        if (this.endingIndex < morse.length && morse[this.endingIndex] === '_') {
+            this.endingIndex++;
+        }
+
+        return this.getLetter(morseLetter);
+    }
+
+    getLetter(morseLetter) {
+        let arrSigns = [];
+
+        for (let i of morseLetter) {
+            switch (i) {
+                case '—':
+                    arrSigns.push(Sign.Long);
+                    break;
+                case '•':
+                    arrSigns.push(Sign.Short);
+                    break;
+                case '_':
+                    arrSigns.push(Sign.Pause);
+                    break;
+            }
+        }
+
+        let mc = new MorseCode(arrSigns);
+        return this.toStr.get(mc.getKey()) || ''; // Return empty string if not found
     }
 
 
