@@ -5,12 +5,20 @@
     }
 
     convertMorseToText(morse) {
-        let text = '';
+        let text = ' ';
+        let startingIdx = 0;
+        let endingIdx = 0;
+        while(morse[endingIdx] !== '_') {
+            endingIdx++;
+        }
+        let letter = morse.substring(0, endingIdx);
+        text += this.toStr.getValue(letter);
 
-        // TODO!
+        console.log(text);
 
         return text;
     }
+
 
     convertTextToMorse(text) {
         text = text.toUpperCase();

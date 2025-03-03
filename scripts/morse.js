@@ -1,17 +1,43 @@
-﻿const name = 'Rudi';
+﻿import {MorseCodeDic} from "./morse-code.js";
 
-function init(){
-    const ayan = {
-        friends: [
-            'Rudi', 'Dave', 'Laurenz'
-        ]
-    };
+const dic = new MorseCodeDic();
 
-    for(const prop of ayan){
-        console.log(prop);
+function stringifyMorse(morse) {
+    let str = '';
+    for (let m of morse) {
+        str += `${m}_`;
     }
+    return str.slice(0, -1);
 }
 
-document.addEventListener('DOMContentLoaded', event =>{
+function convertTextToMorse() {
+    const textBox = document.getElementById('textIn');
+    const val = textBox.value;
+    if (val == null || val.trim() === '') {
+        return;
+    }
+    const morse = dic.convertTextToMorse(val);
+    document.getElementById('morseOut').innerHTML = stringifyMorse(morse);
+}
+
+function convertMorseToText(){
+    const textBox = document.getElementById('textIn');
+    const val = textBox.value;
+    if (val == null || val.trim() === '') {
+        return;
+    }
+    document.getElementById('morseOut').innerHTML = dic.convertMorseToText(val);
+}
+
+function init() {
+    document.getElementById('convBtn').addEventListener('click', () => {
+        convertTextToMorse();
+    })
+    document.getElementById('convBtn2').addEventListener('click', () => {
+        convertMorseToText();
+    })
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
     init();
 });
