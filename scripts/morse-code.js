@@ -12,6 +12,7 @@
         let text = '';
         this.endingIndex = 0;
 
+        // iterate through morse
         while (this.endingIndex < morse.length) {
             text += this.iterateToNextLetter(morse);
         }
